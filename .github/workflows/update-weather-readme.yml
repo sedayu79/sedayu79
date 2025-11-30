@@ -1,6 +1,5 @@
 name: Update README with daily weather (Jakarta)
 
-# Beri izin push (write) ke contents
 permissions:
   contents: write
 
@@ -17,11 +16,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          persist-credentials: true    # pastikan token digunakan untuk push
+          persist-credentials: true
 
-      - name: Get weather (wttr.in)
+      - name: Get weather (wttr.in) with fallback
         run: |
-          curl -s "https://wttr.in/Jakarta?format=3" > weather.txt
+          URL="https://wttr.in/Jakarta?format=3"
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0"
+          # coba ambil, timeout 10s, ikuti redirect; jika gagal, tulis fallback
+          if curl -sS -A "$UA" --max-time 10 -L "$URL" -o weather.txt; then
+            echo "Fetched wttr.in"
+          else
+            echo "Could not fetch weather from wttr.in at $(date -u)" > weather.txt
+            echo "Note: using fallback text (wttr failed)"
+          fi
 
       - name: Generate README
         run: |
