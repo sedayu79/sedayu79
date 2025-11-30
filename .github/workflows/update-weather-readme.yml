@@ -1,5 +1,9 @@
 name: Update README with daily weather (Jakarta)
 
+# Beri izin push (write) ke contents
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 1 * * *"   # 08:00 WIB
@@ -12,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true    # pastikan token digunakan untuk push
 
       - name: Get weather (wttr.in)
         run: |
@@ -23,9 +29,9 @@ jobs:
           echo "" >> README.md
           echo "Update otomatis setiap hari:" >> README.md
           echo "" >> README.md
-          echo "\`\`\`" >> README.md
+          echo '```' >> README.md
           cat weather.txt >> README.md
-          echo "\`\`\`" >> README.md
+          echo '```' >> README.md
           echo "" >> README.md
           echo "_Last update: $(date -u)_" >> README.md
 
