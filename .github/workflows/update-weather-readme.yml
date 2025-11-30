@@ -2,27 +2,39 @@ name: Update README with daily weather (Jakarta)
 
 on:
   schedule:
-    - cron: '0 1 * * *'   # daily at 08:00 WIB (UTC+7)
+    - cron: "0 1 * * *"   # 08:00 WIB
   workflow_dispatch:
 
 jobs:
   update-weather:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install jq
+      - name: Get weather (wttr.in)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y jq
+          curl -s "https://wttr.in/Jakarta?format=3" > weather.txt
 
-      - name: Fetch current weather (Open-Meteo)
+      - name: Generate README
         run: |
-          LAT=-6.2088
-          LON=106.8456
-          URL="https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current_weather=true&timezone=Asia%2FJakarta"
-          curl -s "$URL" -o weather.json
-          TEMP=$(jq -r '.current_weather.temperature' weather.json)
-          WCODE=$(jq -r '.current_weather.weathercode' weather.json)
-          WIND=$(jq -
+          echo "# Cuaca Jakarta 🌤️" > README.md
+          echo "" >> README.md
+          echo "Update otomatis setiap hari:" >> README.md
+          echo "" >> README.md
+          echo "\`\`\`" >> README.md
+          cat weather.txt >> README.md
+          echo "\`\`\`" >> README.md
+          echo "" >> README.md
+          echo "_Last update: $(date -u)_" >> README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update weather" || echo "No changes"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
