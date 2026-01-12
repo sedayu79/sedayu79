@@ -3,7 +3,7 @@
 Update otomatis setiap hari:
 
 ```
-Jakarta: 🌦   +27°C
+Could not fetch weather from wttr.in at Mon Jan 12 03:00:50 UTC 2026
 ```
 
-_Last update: Sun Jan 11 03:03:11 UTC 2026_
+_Last update: Mon Jan 12 03:00:50 UTC 2026_
