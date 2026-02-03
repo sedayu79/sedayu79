@@ -3,7 +3,7 @@
 Update otomatis setiap hari:
 
 ```
-Jakarta: 🌫  +78°F
+Jakarta: 🌦   +28°C
 ```
 
-_Last update: Mon Feb  2 03:34:55 UTC 2026_
+_Last update: Tue Feb  3 03:28:54 UTC 2026_
