@@ -3,7 +3,6 @@
 Update otomatis setiap hari:
 
 ```
-Jakarta: ☀️   +88°F
-```
+Unknown location; please try ~-6.1753941,106.827183```
 
-_Last update: Thu Mar 12 03:27:07 UTC 2026_
+_Last update: Fri Mar 13 03:23:33 UTC 2026_
