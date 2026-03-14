@@ -3,6 +3,7 @@
 Update otomatis setiap hari:
 
 ```
-Unknown location; please try ~-6.1753941,106.827183```
+Jakarta: ☀️   +31°C
+```
 
-_Last update: Fri Mar 13 03:23:33 UTC 2026_
+_Last update: Sat Mar 14 03:21:16 UTC 2026_
