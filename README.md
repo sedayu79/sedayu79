@@ -3,7 +3,7 @@
 Update otomatis setiap hari:
 
 ```
-jakarta: 🌫  +28°C
+weather fetch failed: unexpected status code: 500
 ```
 
-_Last update: Thu Mar 26 03:42:38 UTC 2026_
+_Last update: Fri Mar 27 03:44:27 UTC 2026_
