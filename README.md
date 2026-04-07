@@ -3,7 +3,7 @@
 Update otomatis setiap hari:
 
 ```
-jakarta: ⛅  +86°F
+render failed: response missing current_condition array
 ```
 
-_Last update: Mon Apr  6 03:52:56 UTC 2026_
+_Last update: Tue Apr  7 03:43:47 UTC 2026_
