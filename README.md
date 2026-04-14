@@ -3,7 +3,7 @@
 Update otomatis setiap hari:
 
 ```
-jakarta: ⛅  +88°F
+jakarta: ⛅  +90°F
 ```
 
-_Last update: Mon Apr 13 04:14:52 UTC 2026_
+_Last update: Tue Apr 14 03:56:21 UTC 2026_
