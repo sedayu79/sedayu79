@@ -381,4 +381,4 @@ Update otomatis setiap hari:
 </html>
 ```
 
-_Last update: Mon Jul 13 04:23:22 UTC 2026_
+_Last update: Tue Jul 14 03:50:24 UTC 2026_
