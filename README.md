@@ -375,10 +375,10 @@ Update otomatis setiap hari:
     </style>
 </head>
 <body>
-    <div class="term-container">Jakarta: ✨  +89°F
+    <div class="term-container">Jakarta: ☁️  +94°F
     </div>
 </body>
 </html>
 ```
 
-_Last update: Sat Sep 12 05:13:19 UTC 2026_
+_Last update: Sun Sep 13 05:28:38 UTC 2026_
